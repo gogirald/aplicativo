@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="./static/img/D-TRANSPARENCIA.ico">
+    <title>Data In Situ</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/login.css">
+  </head>
+  <body>
+    {% block body %}
+    {% if session['logged_in'] %}
+    <p>You're logged in already!</p>
+    {% else %}
+
+
+    <form action="/login" method="POST">
+    	<div class="login">
+    		<div class="login-screen">
+    			<div class="app-title">
+    				<img src="./static/img/DATA-IN-SITU.svg" width="100px">
+    			</div>
+
+    			<div class="login-form">
+    				<div class="control-group">
+    				<input type="text" class="login-field" value="" placeholder="usuario" name="username">
+    				<label class="login-field-icon fui-user" for="login-name"></label>
+    				</div>
+
+    				<div class="control-group">
+    				<input type="password" class="login-field" value="" placeholder="contraseña" name="password">
+    				<label class="login-field-icon fui-lock" for="login-pass"></label>
+    				</div>
+
+                    <input type="submit" value="Ingresar" class="btn btn-large btn-block" >
+    			    <br>
+    			</div>
+    		</div>
+    	</div>
+    </form>
+
+    {% endif %}
+    {% endblock %}
+
+  </body>
+</html>

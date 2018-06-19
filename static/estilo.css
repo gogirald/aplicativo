@@ -1,0 +1,27 @@
+body {
+  background-color: #e5e8e8;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.areas {
+  border-right: solid 2px black;
+}
+
+#kWh {
+  font-size: 60px;
+}
+
+.consumo {
+  margin: auto;
+  font-size: 60px;
+}
+
+.energia {
+  display: block;
+  height: 500px;
+}
+
+.energiac {
+  display: block;
+  height: 400px;
+}

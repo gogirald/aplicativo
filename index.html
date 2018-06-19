@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Var DataInSitu</title>
+  </head>
+  <body>
+    <h1>Vast Data In Situ</h1>
+
+
+    <script type="text/javascript" src="crossfilter.js"></script>
+    <script type="text/javascript" src="d3.js"></script>
+    <script type="text/javascript" src="dc.js"></script>
+
+    <script>
+    d3.json("/energia/monitoreo", function(err, data) {
+      if (err) throw err;
+
+      console.log(data);
+
+//      data.forEach(function(d) {
+//        d.Letter = d.Letter;
+//        d.Freq = +d.Freq;
+  });
+
+    </script>
+  </body>
+</html>

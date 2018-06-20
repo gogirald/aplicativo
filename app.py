@@ -62,6 +62,8 @@ def do_admin_login():
     if login_user:
         if login_user['password'] == request.form['password']:
             session['logged_in'] = True
+            global datos
+            datos = login_user['collection']
     else:
         flash('wrong password!')
     return home()
@@ -69,7 +71,7 @@ def do_admin_login():
 @app.route("/energia/monitoreo")
 def energia_dashboard():
     connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
-    collection = connection[DBS_NAME][COLLECTION_NAME]
+    collection = connection[DBS_NAME][datos]
     projects = collection.find(projection=FIELDS)
     json_projects = []
     for project in projects:

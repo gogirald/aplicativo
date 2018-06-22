@@ -25,3 +25,15 @@ body {
   display: block;
   height: 400px;
 }
+
+.date {
+  margin: 10px;
+}
+.form-control {
+  height: 30px;
+  width: 50%;
+}
+
+.fechas {
+  background-color: 'steel-blue';
+}
